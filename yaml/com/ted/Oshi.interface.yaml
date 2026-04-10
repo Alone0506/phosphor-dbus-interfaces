@@ -1,0 +1,40 @@
+description: >
+    Happy coding
+
+properties:
+    - name: Love
+      type: string
+      description: >
+          What makes you happy.
+    - name: OshiName
+      type: string
+      default: Hachi
+      description: >
+          Oshi's name.
+
+signals:
+    - name: OshiChanged
+      description: >
+          Emitted when the oshi changes.
+      properties:
+          - name: NewOshi
+            type: string
+            description: >
+                The new oshi name.
+
+methods:
+    - name: ChangeOshi
+      description: >
+          Change the oshi who makes you happy.
+      parameters:
+          - name: Oshi
+            type: string
+            description: >
+                The oshi who will make you happy.
+      returns:
+          - name: ChangeSuccess
+            type: string
+            description: >
+                New oshi name.
+      errors:
+          - xyz.openbmc_project.Common.Error.ResourceNotFound

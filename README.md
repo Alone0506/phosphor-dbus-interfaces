@@ -16,6 +16,8 @@ found under the `gen` subdirectory. When adding or removing YAML files, this
 must be regenerated. This can be done with the helper script found in the `gen`
 subdirectory: `cd gen && ./regenerate-meson`.
 
+Regenerate & build: `./gen/regenerate-meson;meson builddir && ninja -C builddir`
+
 ## Configuration
 
 Only the xyz/openbmc_project and org/freedesktop interfaces are built by

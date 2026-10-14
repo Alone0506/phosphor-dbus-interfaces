@@ -1,12 +1,13 @@
 # Generated file; do not modify.
+subdir('CPER')
 subdir('Create')
 subdir('Entry')
 subdir('ErrorBlocksTransition')
 subdir('Event')
+subdir('Extension')
 subdir('IPMI')
 subdir('SEL')
 subdir('Settings')
-subdir('Syslog')
 
 sdbusplus_current_path = 'xyz/openbmc_project/Logging'
 

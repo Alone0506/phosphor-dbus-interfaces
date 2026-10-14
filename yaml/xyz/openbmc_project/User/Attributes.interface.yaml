@@ -10,6 +10,8 @@ properties:
           Groups to which the user belong.
       errors:
           - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.NotAllowed
 
     - name: UserPrivilege
       type: string
@@ -51,13 +53,12 @@ properties:
 
     - name: UserPasswordExpired
       type: boolean
-      flags:
-          - const
       description: >
           True when the user's password must be changed before access should be
           granted.
       errors:
           - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.NotAllowed
 
     - name: TOTPSecretkeyRequired
       type: boolean
